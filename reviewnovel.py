@@ -61,15 +61,8 @@ def main():
         cleaned_review = preprocess_text(review)
         sentiment, sentiment_scores = detect_sentiment(cleaned_review)
 
-        st.write("Sentimen: ", sentiment)
-        st.write("Nilai Sentimen: ", sentiment_scores['compound'])
-
-        #positive_words = [token for token in word_tokenize(cleaned_review) if detect_sentiment(token)[0] == 'Positive']
-        #highlighted_review = ' '.join(['**'+token+'**' if token in positive_words else token for token in word_tokenize(review)])
-
-        #st.write("Review dengan Penekanan Kata Positif:")
-        #st.markdown(highlighted_review)
-        
+        st.write("Sentimen          : ", sentiment)
+        st.write("Nilai Sentimen    : ", sentiment_scores['compound'])
 
 if __name__ == '__main__':
     main()
